@@ -63,6 +63,11 @@ font-family: 'Source Sans Pro', sans-serif;
     }
     /*END OF NAVIGATION STYLING*/
 
+    footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
     footer > div > h2 {
         font-size: 1.5em;
         font-style: normal;
@@ -72,6 +77,7 @@ font-family: 'Source Sans Pro', sans-serif;
     }
 
     body{
+        margin: 0;
         background-color: white;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 16px;
@@ -82,19 +88,28 @@ font-family: 'Source Sans Pro', sans-serif;
 
     main {
         padding-top: 139.8px;
+        max-width: 900px;
+        margin: 0 auto;
     }
 
     img {
-        width: 100%;
+        max-width: 100%;
       }
     
+    
+    /*  
     svg {
         width: 100%;
-    }
+    }*/
 
     .logo {
         max-width: 150px;
         max-height: 75px;
+    }
+
+    
+    .no-margin{
+        margin: 0 0;
     }
 
     h1{
@@ -104,6 +119,8 @@ font-family: 'Source Sans Pro', sans-serif;
         font-size: 4em;
         font-weight:400;
         color: #006B5F;
+        margin: 0 0;
+        width: 100%;
     }
     
     h2{
@@ -123,6 +140,9 @@ font-family: 'Source Sans Pro', sans-serif;
     
     h4,h5{
         font-family: 'Kumbh Sans', sans-serif;
+        color:#006B5F;
+        font-size: 700;
+        margin: 0 0;
     }
 
     a{
@@ -157,20 +177,40 @@ font-family: 'Source Sans Pro', sans-serif;
         text-decoration: none;
     }
 
+    .center {
+        text-align: center;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .bold{
+        font-weight: 700;
+    }
+
+    .gray{
+        color: rgb(115, 115, 115);
+    }
+
+
 /*CSS STYLING FOR index.html*/
     #tagline {
         display: inline-block;
-        width: 100%;
-        background-color: hsl(170, 39%, 56%, .60);
+        background-color: hsl(170, 39%, 56%, .30);
         padding: 10px 10px;
         margin: 0 0;
+    }
+
+    #hero {
+        text-align: center;
     }
 
     #hero h1{
         display: inline-block;
         text-align: center;
         font-family: 'Poppins', sans-serif;
-        font-size: 4em;
+        font-size: 2.5em;
         font-weight:400;
         color: #f39530;
         margin: 0 auto;
@@ -178,6 +218,7 @@ font-family: 'Source Sans Pro', sans-serif;
 
     #hero p{
         margin: 0 0;
+        display: inline-block;
     }
 
     .proj {
@@ -185,25 +226,27 @@ font-family: 'Source Sans Pro', sans-serif;
         padding: 10px 10px;
     }
 
-/*how do I center buttons within a "proj" class?
-    .proj > .button {
-        text-align: center;
-    }
-*/
-
 /*CSS STYLING FOR about.html*/
 
 .headshot {
     max-width: 250px;
+    text-align: center;
 }
 
 .icon {
     max-width: 50px;
 }
 
+.pic {
+    text-align: center;
+}
+
+.caption {
+    font-size: .8em;
+    text-align: center;
+}
+
 /*CSS STYLING FOR peanuts.html*/
-
-
 
 
 
@@ -215,6 +258,121 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 .row {
-    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+    margin: 0 0; /* 0 top and bottom, 0 left and right */
 }
 
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+} /*clears flow from floating columns*/
+
+[class*="col-"] {
+    float:left;
+    padding: 10px;
+} 
+
+
+
+/*====================
+Small devices (639 px and smaller)
+======================*/
+@media only screen and (max-width: 639px) {
+    
+    .col-sm-1{
+        width: 25%;
+    }
+
+    .col-sm-2{
+        width: 50%;
+    }
+    
+    .col-sm-3{
+        width: 75%;
+    }
+
+}
+
+
+/*====================
+Medium devices (640 px and larger)
+======================*/
+@media only screen and (min-width: 640px) {
+
+    header{
+        text-align: unset;
+    }
+
+    nav{
+        width: auto;
+        float: right;
+        margin-top: 14.8px;
+    }
+
+    main{
+        padding-top: 82.2px;
+    }
+
+    #hero h1{
+        font-size: 4em;
+    }
+
+    body{
+        font-size: 18px;
+    }
+
+    h1{
+        text-align: unset;
+    }
+
+    #about-page h3{
+        margin-top: 0;
+    }   
+
+    .col-md-6{
+        width: 50%;
+    }
+
+    .col-md-4{
+        width: 33.33%;
+    }
+
+    .col-md-2{
+        width:  16.67%;
+    }
+    
+    .col-md-8{
+        width: 66.67%;
+    }
+
+    .col-md-12{
+        width: 100%;
+    }
+
+    .pic{
+        text-align: unset;
+    }
+
+
+}
+
+/*====================
+Large devices (1024 px and larger)
+======================*/
+@media only screen and (min-width: 1024px) {
+    
+    .col-md-3{
+        width: 25%
+    }
+
+    .col-md-9{
+        width: 75%;
+    }
+}
+
+/*====================
+X-large devices (1440 px and larger)
+======================*/
+@media only screen and (min-width: 1440px) {
+
+}
