@@ -23,9 +23,8 @@ font-family: 'Source Sans Pro', sans-serif;
 
     header {
         background-color: #62BAAC;
-        padding: 0;
+        padding: 10px 0 4px;
         margin: 0 auto;
-        text-align: center;
         display: inline-block;
         width: 100%;
 
@@ -36,18 +35,11 @@ font-family: 'Source Sans Pro', sans-serif;
     }
 
     /*START OF NAVIGATION STYLING*/
-    nav{
-        display: inline-block;
-        width: 100%;
-    }
 
     nav > ul {
         list-style-type: none;
         padding: 0;
-    }
-
-    nav > ul > li {
-        display: inline-block;
+        margin: 0;
     }
 
     nav > ul > li > a {
@@ -61,6 +53,11 @@ font-family: 'Source Sans Pro', sans-serif;
     nav > ul > li > a:hover {
         color: white;
     }
+
+    .navtoggle.responsive li  {
+        display: block;
+    }
+
     /*END OF NAVIGATION STYLING*/
 
     footer {
@@ -87,7 +84,7 @@ font-family: 'Source Sans Pro', sans-serif;
     }
 
     main {
-        padding-top: 139.8px;
+        padding-top: 96.2px;
         max-width: 900px;
         margin: 0 auto;
     }
@@ -197,6 +194,21 @@ font-family: 'Source Sans Pro', sans-serif;
         vertical-align: middle;
     }
 
+    .navtoggle li:not(:last-child) {
+        display: none;
+    } /*hide navigation items except for menu icon*/
+
+    .navtoggle, .navtoggle.responsive {
+        position: relative;
+    }
+
+    .navtoggle li .icon {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        font-size: 20px;
+        padding-right: 0;
+    }
 
 /*CSS STYLING FOR index.html*/
     #tagline {
@@ -305,6 +317,14 @@ Medium devices (640 px and larger)
 ======================*/
 @media only screen and (min-width: 640px) {
 
+    .navtoggle li:not(:last-child) {
+        display: inline-block;
+    }
+
+    .navtoggle li:last-child {
+        display: none;
+    }
+
     header{
         text-align: unset;
     }
@@ -334,6 +354,14 @@ Medium devices (640 px and larger)
     #about-page h3{
         margin-top: 0;
     }   
+
+    nav > ul {
+        margin: 1em 0;
+    }
+
+    nav > ul > li {
+        display: inline-block;
+    }
 
     .col-md-1{
         width: 8.33%
