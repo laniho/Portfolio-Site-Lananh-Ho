@@ -54,37 +54,6 @@ nav > ul > li > a:hover {
     color: white;
 }
 
-/*.navtoggle li .icon {
-    position: absolute;
-    right: 0;
-    top: 2px;
-    font-size: 20px;
-    padding-right: 0;
-}
-
-.navtoggle.responsive nav {
-    padding: 24px 0 0;
-}    
-
-.navtoggle.responsive li  {
-    display: block;
-    padding: 10px 0;
-}
-
-.navtoggle.responsive li:last-child {
-    padding: 0 0 10px;
-}
-
-.navtoggle li:not(:last-child) {
-    display: none;
-} /*hide navigation items except for menu icon*/
-
-/*
-.navtoggle, .navtoggle.responsive {
-    position: relative;
-}
-*/
-
 .navtoggle li:not(:last-child) {
     display: none;
 } /*hide navigation items except for menu icon*/
