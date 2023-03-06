@@ -279,7 +279,19 @@ width: 100%;
 
 .flex-container {
 display: flex;
-text-align: middle;
+align-items: center;
+}
+
+.percent {
+    text-align: center;
+    color:#62BAAC; 
+    font-size: 4em; 
+    font-weight:700;
+    margin: 0;
+}
+
+.small-text {
+    font-size: .8em;
 }
 
 /*Layout styling*/
@@ -304,30 +316,21 @@ padding: 10px;
 } 
 
 
-
-/*====================
-Small devices (639 px and smaller)
-======================*/
-@media only screen and (max-width: 639px) {
-
-.col-sm-1{
+.col-sm-1 {
     width: 25%;
 }
 
-.col-sm-2{
+.col-sm-2 {
     width: 50%;
 }
 
-.col-sm-3{
+.col-sm-3 {
     width: 75%;
 }
 
-.col-sm-4{
+.col-sm-4 {
     width: 100%;
 }
-
-}
-
 
 /*====================
 Medium devices (640 px and larger)
@@ -424,11 +427,24 @@ Large devices (1024 px and larger)
 ======================*/
 @media only screen and (min-width: 1024px) {
 
-.col-lg-2 {
-    width: 20%;
+.col-lg-1 {
+    width: 8.33%;
 }
+
+.col-lg-2 {
+    width: 16.67%;
+}
+
+.col-lg-3 {
+    width: 25%;
+}
+
 .col-lg-6 {
     width: 50%;
+}
+
+.col-lg-12 {
+    width: 100%;
 }
 
 .shaded-box-lg {
@@ -437,12 +453,6 @@ Large devices (1024 px and larger)
 
 .process-lg {
     width: 154px;
-}
-
-.tools-used-lg {
-    height: 130px;
-    display: flex;
-    align-items: center;
 }
 
 .small-text-lg {
