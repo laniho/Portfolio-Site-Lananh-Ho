@@ -22,7 +22,7 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 header {
-    background-color: #62BAAC;
+    background-color: #080911;
     padding: 10px 0 4px;
     margin: 0 auto;
     display: inline-block;
@@ -48,6 +48,7 @@ nav > ul > li > a {
     text-transform: uppercase;
     font-weight: 400;
     text-decoration: none;
+    color: white;
 }
 
 nav > ul > li > a:hover {
@@ -278,8 +279,27 @@ width: 100%;
 }
 
 .flex-container {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.flex-container-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex-col {
+	width: 100%;
+    flex-direction: row;
+	padding: 10px;
+    display: flex;
 }
 
 .percent {
@@ -292,6 +312,28 @@ align-items: center;
 
 .small-text {
     font-size: .8em;
+}
+
+.item-desc {
+    width: 75%;
+    margin: 0;
+    max-width: 210px;
+}
+
+.item-img {
+    width: 25%;
+    max-width: 70px;
+    margin: 0 10px 0 0;
+}
+
+.img-icon {
+    width: 100px;
+}
+
+.img-iphone {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 /*Layout styling*/
@@ -336,6 +378,33 @@ padding: 10px;
 Medium devices (640 px and larger)
 ======================*/
 @media only screen and (min-width: 640px) {
+
+.flex-col {
+    width: 20%;
+    padding: 10px;
+    display: block;
+}
+
+.flex-col-tools-md {
+    width: 33.33%;
+    display: block;
+}
+
+.small-text-md {
+    font-size: .8em;
+    margin: 0;
+}
+
+.item-desc {
+    width: 100%;
+    max-width: none;
+}
+
+.item-img {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
 
 .navtoggle li:not(:last-child) {
     display: inline-block;
@@ -455,12 +524,17 @@ Large devices (1024 px and larger)
     width: 154px;
 }
 
-.small-text-lg {
-    font-size: .8em;
-}
-
 .margin-top-lg {
     margin-top: 20px;
+}
+
+.img-iphone{
+    max-width: 350px;
+}
+
+.img-pref{
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 }
