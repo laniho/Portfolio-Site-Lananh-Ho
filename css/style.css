@@ -87,7 +87,7 @@ nav > ul > li > a:hover {
 /*END OF NAVIGATION STYLING*/
 
 footer {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -111,7 +111,7 @@ body{
 
 main {
     padding-top: 100px;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
