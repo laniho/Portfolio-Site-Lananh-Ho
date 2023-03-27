@@ -39,6 +39,16 @@ header {
     top: 0;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
 /*START OF NAVIGATION STYLING*/
 
 nav > ul {
@@ -101,13 +111,13 @@ footer {
     margin: 0 auto;
 }
 
-footer > div > h2 {
+/* footer > div > h2 {
     font-size: 1.5em;
     font-style: normal;
     color:#006B5F;
     font-family: 'Poppins', sans-serif;
     font-weight:400;
-}
+} */
 
 body{
     margin: 0;
@@ -121,13 +131,25 @@ body{
 main {
     padding-top: 53.48px;
     margin: 0 auto;
-    background-color: #EFEDFF;
 }
 
 img {
     width: 100%;
 }
 
+.bg-purple{
+    background-color: #EFEDFF;
+    padding: 15px 15px;
+}
+
+.bg-blue{
+    background-color: #33C4E9;
+}
+
+.bg-white{
+    background-color: white;
+    padding: 15px 15px;
+}
 
 /*  
 svg {
@@ -154,26 +176,32 @@ h1{
 }
 
 h2{
-    display: inline-block;
+    display: inline;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
-    font-weight:400;
-    color: #000000;
+    font-weight:600;
+    /* color: white;
+    background-color: #0D0051; */
+    color: #0D0051;
+    /* background-color: #0D0051; */
+    /* padding: 0 0.3em; */
     margin: 0 0;
     width: 100%;
 }
 
 h3{
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 1.5em;
-    /*text-transform: uppercase;*/
-    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25em;
+    font-weight:600;
+    color: #5E63BA;
+    /* text-transform: uppercase; */
 }
 
 h4,h5{
-    font-family: 'Kumbh Sans', sans-serif;
-    color:#006B5F;
-    font-size: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #0D0051;
     margin: 0 0;
 }
 
@@ -190,7 +218,7 @@ a:focus{
 }
 
 .button{
-    display: inline-block;
+    /* display: inline-block;
     background-color: #006B5F;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -200,11 +228,29 @@ a:focus{
     border-radius: 7px;
     border: 0px;
     text-decoration: none;
+    text-transform: none; */
+
+    display: inline-block;
+    background-color: #676BBE;
+    background-color: linear-gradient(90deg, rgba(82,220,255,1) 0%, rgba(203,187,248,1) 100%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    border: 0px;
+    text-decoration: none;
     text-transform: none;
+    width: 130px;
+    text-align: center;
+    margin: 5px;
+
+
 }
 
 .button:hover{
-    background-color: #62BAAC;
+    background-color: #ABAEED;
     color:white;
     text-decoration: none;
 }
@@ -248,6 +294,7 @@ a:focus{
     background-position: left;
     -webkit-background-clip: text;
     color: transparent;
+    padding: 0.25em;
 }
 
 .dark {
@@ -304,6 +351,11 @@ a:focus{
     margin: 5px;
 }
 
+.button-hero-sec:hover{
+    color:#0D0051;
+    text-decoration: none;
+}
+
 .button-hero-prim {
     display: inline-block;
     background-color: rgb(14, 0, 82, 50%);
@@ -321,9 +373,15 @@ a:focus{
     margin: 5px;
 }
 
+.button-hero-prim:hover{
+    color:white;
+    text-decoration: none;
+}
+
 #work {
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .proj {
@@ -353,7 +411,7 @@ text-align: center;
 
 /*CSS STYLING FOR peanuts.html*/
 .shaded-box {
-background-color: hsl(170, 39%, 56%, 0.30);
+background-color: rgba(255, 255, 255, 0.5);
 padding: 10px 10px;
 margin: 0 0;
 width: 100%;
@@ -385,14 +443,23 @@ width: 100%;
 
 .percent {
     text-align: center;
-    color:#62BAAC; 
-    font-size: 4em; 
+    color:#5E63BA; 
+    font-size: 3em; 
     font-weight:700;
     margin: 0;
 }
 
+.percent-blk{
+    width: 40%;
+    margin: 0 10px;
+}
+
 .small-text {
-    font-size: .8em;
+    font-size: .9em;
+}
+
+.xsmall-text {
+    font-size: .7em;
 }
 
 .item-desc {
@@ -408,7 +475,8 @@ width: 100%;
 }
 
 .img-icon {
-    width: 100px;
+    width: 70px;
+    margin: 0 10px;
 }
 
 .img-iphone {
@@ -417,13 +485,16 @@ width: 100%;
     margin: 0 auto;
 }
 
-/*Layout styling*/
-
-.container {
-padding: 0 15px;
-max-width: 1200px;
-margin: 0 auto;
+.btm-margin {
+    margin-bottom: .5em;
+    line-height: 1.2em;
 }
+
+.wrap{
+    display: inline-block;
+}
+
+/*Layout styling*/
 
 .row {
 margin: 0 0; /* 0 top and bottom, 0 left and right */
@@ -473,8 +544,8 @@ Medium devices (640 px and larger)
     display: block;
 }
 
-.small-text-md {
-    font-size: .8em;
+.small-text {
+    font-size: .7em;
     margin: 0;
 }
 
@@ -484,9 +555,9 @@ Medium devices (640 px and larger)
 }
 
 .item-img {
-    width: 100%;
+    width: 50%;
     max-width: none;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .navtoggle li:not(:last-child) {
@@ -509,8 +580,8 @@ nav{
     line-height: 0;
 }
 
-main{
-    padding-top: 0;
+main {
+    padding-top: 53.48px;
 }
 
 #hero h1{
@@ -521,9 +592,9 @@ body{
     font-size: 18px;
 }
 
-h1{
+/* h1{
     text-align: unset;
-}
+} */
 
 #about-page h3{
     margin-top: 0;
