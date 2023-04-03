@@ -1,5 +1,3 @@
-console.log("Hello world");
-
 function menuToggle() {
     var x = document.getElementById('myNavtoggle'); /*searches document for ID; assign as variable x*/
     var isMobileBreakpoint = window.innerWidth <= 640
