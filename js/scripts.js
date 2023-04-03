@@ -7,3 +7,4 @@ function menuToggle() {
       x.className = 'navtoggle'; /*change className back to navtoggle*/
     }
 }
+
