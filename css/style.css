@@ -20,6 +20,27 @@ font-family: 'Patua One', cursive; */
 
 /*CSS STYLING FOR ALL PAGES*/
 /*SET BOX-SIZING TO BORDER-BOX FOR ALL ELEMENTS*/
+
+/* start test */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+/* body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #5CA4EA;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+} */
+
+
+/* end test */
+
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -57,6 +78,7 @@ header {
 
 /*START OF NAVIGATION STYLING*/
 
+
 nav>ul {
     list-style-type: none;
     padding: 0;
@@ -68,13 +90,17 @@ nav>ul>li {
     margin: 0 5px;
 }
 
-nav>ul>li>a {
+nav>ul>li>a{
     font-family: 'Poppins', sans-serif;
     padding: 0;
     text-transform: uppercase;
     font-weight: 400;
     text-decoration: none;
     color: white;
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
 nav>ul>li>a:hover {
@@ -90,6 +116,9 @@ nav>ul>li>a:hover {
 .navtoggle,
 .navtoggle.responsive {
     position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
 }
 
 .navtoggle li .icon {
@@ -118,6 +147,54 @@ nav>ul>li>a:hover {
 }
 
 /* sets bottom padding to 10px */
+
+button {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    font-size: 1em;
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: #000000;
+  }
+
+  button:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  button::after {
+    content: "";
+    background: #676BBE;
+    position: absolute;
+    z-index: -1;
+    display: block;
+  }
+
+  button[class^="slide"]::after {
+    transition: all 0.35s;
+  }
+
+  button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+  }
+  
+  button.slide_from_bottom::after {
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+  }
 
 /*END OF NAVIGATION STYLING*/
 
@@ -166,14 +243,10 @@ img {
     padding: 15px;
 }
 
-/*  
-svg {
-    width: 100%;
-}*/
-
 .logo {
     width: 80px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 
@@ -286,12 +359,19 @@ a:focus {
     margin: 0 auto;
 }
 
-#name {
+.name {
     background-image: url("../img/home/bg.jpg");
     background-position: left;
     -webkit-background-clip: text;
     color: transparent;
     padding: 0.25em;
+    transition-duration: 0.5s;
+    transition-property: color;
+}
+
+.name:hover {
+    background-image: none;
+    color: white;
 }
 
 .dark {
@@ -299,7 +379,16 @@ a:focus {
     display: inline-block;
     margin: 0;
     padding: 0;
+    transition-duration: 0.5s;
+    transition-property: all;
 }
+
+.dark:hover {
+    background-color: rgb(13, 0, 81, 10%);
+    /* box-shadow:0px 0px 0px 1px white inset; */
+}
+
+
 
 .inline {
     display: inline-block;
@@ -333,46 +422,51 @@ a:focus {
 
 .button-hero-sec {
     display: inline-block;
-    background-color: white;
+    background-color: rgb(255, 255, 255, 40%);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1em;
     color: #0D0051;
     padding: 10px;
     border-radius: 50px;
-    border: 0px;
+    /* box-shadow:0px 0px 0px 3px white inset; */
     text-decoration: none;
     text-transform: none;
-    width: 130px;
+    width: 140px;
     text-align: center;
-    margin: 5px;
+    margin: 5px;   
+    transition: 0.5s ease-in-out;
 }
 
 .button-hero-sec:hover {
-    color: #0D0051;
+    background-color: white;
+    color:#0D0051;
     text-decoration: none;
 }
 
 .button-hero-prim {
     display: inline-block;
-    background-color: rgb(14, 0, 82, 50%);
+    background-color: #6962A8;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1em;
     color: white;
     padding: 10px;
     border-radius: 50px;
-    border: 0px;
+    /* box-shadow:0px 0px 0px 3px #6962A8 inset; */
     text-decoration: none;
     text-transform: none;
-    width: 130px;
+    width: 140px;
     text-align: center;
     margin: 5px;
+    transition-duration: 0.5s;
+    transition-property: background-color;
 }
 
 .button-hero-prim:hover {
     color: white;
     text-decoration: none;
+    background-color: rgb(13, 0, 81, 70%);
 }
 
 #work {
@@ -420,6 +514,17 @@ a:focus {
 .flex-container {
     display: flex;
     align-items: center;
+}
+
+.flex-container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-right {
+    display: flex;
+    align-items: right;
 }
 
 .flex-container-wrap {
@@ -668,7 +773,7 @@ Medium devices (640 px and larger)
     }
 
     nav>ul {
-        margin: 1em 0;
+        margin: 6.37px 0;
     }
 
     nav>ul>li {

@@ -30,30 +30,25 @@
     <header>
         <div class="container">
             <div class="navtoggle" id="myNavtoggle">
-                <div class="logo">
-                    <a href="index.html">
-                        <picture>
-                            <source srcset="img/logo@1x.png" media="(max-width:767px)">
-                            <img src="img/logo@2x.png" alt="Lana.">
-                        </picture>
-                    </a>
-                </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <picture>
+                                <source srcset="img/logo@1x.png" media="(max-width:767px)">
+                                <img src="img/logo@2x.png" alt="Lana.">
+                            </picture>
+                        </a>
+                    </div>
 
-                <nav>
-                    <ul>
-                        <li><a href="index.html#work" onclick="menuToggle()">Work</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li>
-                            <a href="files/resume.pdf" target="_blank" download onclick="menuToggle()">Resume</a>
-                        </li>
-                        <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
-                        <li>
-                            <a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i
-                                    class="fas fa-bars"></i></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html#work" onclick="menuToggle()"><button class="slide_from_bottom">Work</button></a></li>
+                            <li><a href="about.html"><button class="slide_from_bottom">About</button></a></li>
+                            <li><a href="files/resume.pdf" target="_blank" download onclick="menuToggle()"><button class="slide_from_bottom">Resume</button></a></li>
+                            <li><a href="#contact" onclick="menuToggle()"><button class="slide_from_bottom">Contact</button></a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
         </div>
     </header>
 
@@ -63,12 +58,12 @@
                 <div id="intro">
                     <div class="wrap-landscape">Hi,</div>
                     <div class="wrap">I'm</div>
-                    <div class="dark"><span id="name">Lana.</span></div>
+                    <div class="dark"><span class="name">Lana.</span></div>
                 </div>
                 <div id="tagline">
                     I’m a UX designer who loves to solve problems that often go unnoticed.
                 </div>
-                <div class="center">
+                <div class="btn-hero-container">
                     <a href="files/resume.pdf" target="_blank" download class="button-hero-sec">View resume</a>
                     <a href="#work" class="button-hero-prim">View work</a>
                 </div>
