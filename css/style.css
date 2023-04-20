@@ -296,21 +296,7 @@ a:focus {
      }
 }
 
-#intro {
-    font-family: 'Patua One', cursive;
-    font-size: 4em;
-    color: #0D0051;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-#name {
-    background-image: url("../img/home/bg.jpg");
-    background-position: left;
-    -webkit-background-clip: text;
-    color: transparent;
-    padding: 0.25em;
-}
 
 .dark {
     background-color: #0D0051;
