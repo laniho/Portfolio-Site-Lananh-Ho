@@ -276,6 +276,24 @@ a:focus {
     font-size: 1.5em;
     max-width: 1200px;
     margin: 20px auto;
+    animation: fadeInAnimation 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation: fadeInAnimation 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
 
 #intro {
@@ -292,7 +310,18 @@ a:focus {
     -webkit-background-clip: text;
     color: transparent;
     padding: 0.25em;
+<<<<<<< Updated upstream
 }
+=======
+    transition-duration: 0.5s;
+    transition-property: color;
+}
+
+/* .name:hover {
+    background-image: none;
+    color: white;
+} */
+>>>>>>> Stashed changes
 
 .dark {
     background-color: #0D0051;
@@ -301,6 +330,16 @@ a:focus {
     padding: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+/* .dark:hover {
+    background-color: rgb(13, 0, 81, 10%);
+    box-shadow:0px 0px 0px 1px white inset;
+} */
+
+
+
+>>>>>>> Stashed changes
 .inline {
     display: inline-block;
 }
@@ -333,19 +372,32 @@ a:focus {
 
 .button-hero-sec {
     display: inline-block;
+<<<<<<< Updated upstream
     background-color: white;
+=======
+    background-color: transparent;
+>>>>>>> Stashed changes
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1em;
     color: #0D0051;
     padding: 10px;
     border-radius: 50px;
+<<<<<<< Updated upstream
     border: 0px;
+=======
+    box-shadow:0px 0px 0px 3px white inset;
+>>>>>>> Stashed changes
     text-decoration: none;
     text-transform: none;
     width: 130px;
     text-align: center;
+<<<<<<< Updated upstream
     margin: 5px;
+=======
+    margin: 5px;   
+    transition: 0.3s ease-in-out;
+>>>>>>> Stashed changes
 }
 
 .button-hero-sec:hover {
@@ -368,6 +420,11 @@ a:focus {
     width: 130px;
     text-align: center;
     margin: 5px;
+<<<<<<< Updated upstream
+=======
+    transition-duration: 0.3s;
+    transition-property: background-color;
+>>>>>>> Stashed changes
 }
 
 .button-hero-prim:hover {
@@ -386,8 +443,30 @@ a:focus {
     padding: 10px 10px;
 }
 
+.proj-line {
+    height: 7px;
+    width: 50%;
+    max-width: 420px;
+    background-color: #FEC66F;
+    margin-bottom: 40px;
+}
+
 .no-padding {
     padding-top: 0;
+}
+
+.zoom{
+    transition: all .2s;
+}
+
+.zoom:hover{
+    transform: scale(1.01);
+    background-color: #F5F5F5;
+}
+
+.bg-gray {
+    background-color: #F5F5F5;
+    padding: 15px;
 }
 
 /* CSS STYLING FOR about.html */
@@ -638,6 +717,7 @@ Medium devices (640 px and larger)
     header {
         text-align: unset;
         padding: 10px 0;
+        z-index: 2;
     }
 
     nav {
