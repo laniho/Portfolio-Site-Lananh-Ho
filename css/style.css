@@ -370,7 +370,7 @@ button.slide_from_bottom::after {
 }
 
 .name {
-    background-image: url("../img/home/bg.jpg");
+    background-image: linear-gradient(to right, #B7E5FF , #C3D1FE);
     background-position: left;
     -webkit-background-clip: text;
     color: transparent;
@@ -405,7 +405,7 @@ button.slide_from_bottom::after {
 #hero {
     margin: 0;
     text-align: left;
-    background-image: url("../img/home/bg.jpg");
+    background-image: linear-gradient(to right, #B4F1FE , #E9B5FF);
     background-color: #B6C5FE;
     background-size: cover;
     height: 100vh;
