@@ -481,7 +481,31 @@ button.slide_from_bottom::after {
 .button-hero-prim:hover {
     color: white;
     text-decoration: none;
-    background-color: rgb(13, 0, 81, 70%);
+    background-color: rgb(13, 0, 81, 100%);
+}
+
+.button-prim {
+    display: inline-block;
+    background-color: #6962A8;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+.button-prim:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(13, 0, 81, 100%);
 }
 
 #work {
