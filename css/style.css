@@ -25,22 +25,6 @@ font-family: 'Patua One', cursive; */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 
-/* body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #5CA4EA;
-  overflow: hidden;
-  font-family: 'Lato', sans-serif;
-} */
-
-
-/* end test */
-
-
-
-
 * {
     box-sizing: border-box;
 }
@@ -60,6 +44,7 @@ header {
     -moz-box-shadow: 0px 7px 14px -1px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
+    z-index: 2;
 }
 
 .inline-block {
@@ -116,9 +101,6 @@ nav>ul>li>a:hover {
 .navtoggle,
 .navtoggle.responsive {
     position: relative;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
 }
 
 .navtoggle li .icon {
@@ -201,15 +183,12 @@ button {
 footer {
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
-/* footer > div > h2 {
-    font-size: 1.5em;
-    font-style: normal;
-    color:#006B5F;
-    font-family: 'Poppins', sans-serif;
-    font-weight:400;
-} */
+hr {
+    border-top: 1px solid #EFEFEF;
+}
 
 body {
     margin: 0;
@@ -249,12 +228,9 @@ img {
     vertical-align: middle;
 }
 
-
 .no-margin {
     margin: 0;
 }
-
-
 
 h1 {
     font-family: 'Patua One', cursive;
@@ -301,28 +277,52 @@ a:focus {
     text-decoration: underline;
 }
 
-.button {
-    display: inline-block;
-    background-color: #676BBE;
-    background-color: linear-gradient(90deg, rgba(82, 220, 255, 1) 0%, rgba(203, 187, 248, 1) 100%);
-    font-family: 'Inter', sans-serif;
+button {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    text-transform: uppercase;
     font-weight: 400;
-    font-size: 1em;
-    color: white;
-    padding: 10px;
-    border-radius: 50px;
-    border: 0px;
     text-decoration: none;
-    text-transform: none;
-    width: 130px;
-    text-align: center;
-    margin: 5px;
+    color: white;
+    background-color: #000000;
+    font-size: 1em;
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: #000000;
 }
 
-.button:hover {
-    background-color: #ABAEED;
+button:hover {
     color: white;
-    text-decoration: none;
+    cursor: pointer;
+}
+
+button::after {
+    content: "";
+    background: #676BBE;
+    position: absolute;
+    z-index: -1;
+    display: block;
+}
+
+button[class^="slide"]::after {
+    transition: all 0.35s;
+}
+
+button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+}
+  
+button.slide_from_bottom::after {
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
 }
 
 .center {
@@ -341,14 +341,30 @@ a:focus {
     color: rgb(115, 115, 115);
 }
 
-
-
 /*CSS STYLING FOR index.html*/
 #tagline {
     font-family: 'League Spartan', sans-serif;
     font-size: 1.5em;
     max-width: 1200px;
     margin: 20px auto;
+    animation: fadeInAnimation 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation: fadeInAnimation 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
 
 #intro {
@@ -360,7 +376,7 @@ a:focus {
 }
 
 .name {
-    background-image: url("../img/home/bg.jpg");
+    background-image: linear-gradient(to right, #B7E5FF , #C3D1FE);
     background-position: left;
     -webkit-background-clip: text;
     color: transparent;
@@ -388,8 +404,6 @@ a:focus {
     /* box-shadow:0px 0px 0px 1px white inset; */
 }
 
-
-
 .inline {
     display: inline-block;
 }
@@ -397,7 +411,7 @@ a:focus {
 #hero {
     margin: 0;
     text-align: left;
-    background-image: url("../img/home/bg.jpg");
+    background-image: linear-gradient(to right, #B4F1FE , #E9B5FF);
     background-color: #B6C5FE;
     background-size: cover;
     height: 100vh;
@@ -422,20 +436,21 @@ a:focus {
 
 .button-hero-sec {
     display: inline-block;
-    background-color: rgb(255, 255, 255, 40%);
+    background-color: transparent;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1em;
     color: #0D0051;
     padding: 10px;
     border-radius: 50px;
-    /* box-shadow:0px 0px 0px 3px white inset; */
+
+    box-shadow:0px 0px 0px 3px white inset;
     text-decoration: none;
     text-transform: none;
     width: 140px;
     text-align: center;
     margin: 5px;   
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .button-hero-sec:hover {
@@ -453,20 +468,44 @@ a:focus {
     color: white;
     padding: 10px;
     border-radius: 50px;
-    /* box-shadow:0px 0px 0px 3px #6962A8 inset; */
+
     text-decoration: none;
     text-transform: none;
     width: 140px;
     text-align: center;
     margin: 5px;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-property: background-color;
 }
 
 .button-hero-prim:hover {
     color: white;
     text-decoration: none;
-    background-color: rgb(13, 0, 81, 70%);
+    background-color: rgb(13, 0, 81, 100%);
+}
+
+.button-prim {
+    display: inline-block;
+    background-color: #6962A8;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+.button-prim:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(13, 0, 81, 100%);
 }
 
 #work {
@@ -480,8 +519,30 @@ a:focus {
     padding: 10px 10px;
 }
 
+.proj-line {
+    height: 7px;
+    width: 50%;
+    max-width: 420px;
+    background-color: #FEC66F;
+    margin-bottom: 40px;
+}
+
 .no-padding {
     padding-top: 0;
+}
+
+.zoom{
+    transition: all .2s;
+}
+
+.zoom:hover{
+    transform: scale(1.01);
+    background-color: #EFEFEF;
+}
+
+.bg-gray {
+    background-color: #F5F5F5;
+    padding: 15px;
 }
 
 /* CSS STYLING FOR about.html */
@@ -609,8 +670,6 @@ a:focus {
     display: block;
 }
 
-;
-
 /*Layout styling*/
 
 .row {
@@ -716,11 +775,6 @@ Medium devices (640 px and larger)
         display: block;
     }
 
-    /* .small-text {
-    font-size: .7em;
-    margin: 0;
-} */
-
     .item-desc {
         width: 100%;
         max-width: none;
@@ -763,10 +817,6 @@ Medium devices (640 px and larger)
     body {
         font-size: 18px;
     }
-
-    /* h1{
-    text-align: unset;
-} */
 
     #about-page h3 {
         margin-top: 0;
